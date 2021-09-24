@@ -49,6 +49,10 @@ listPayment(){
 
 }
 
+listProfile(){
+  this.props.history.push(`/listprofile`);
+
+}
 
   render() {
     return (
@@ -63,6 +67,7 @@ listPayment(){
         <button style={{marginLeft: "10px"}} onClick={ () => this.listProduct()} className="btn btn-info">Product Management</button>
         <button style={{marginLeft: "10px"}} onClick={ () => this.listDelivary()} className="btn btn-info">Delivary Management</button>
         <button style={{marginLeft: "10px"}} onClick={ () => this.listPayment()} className="btn btn-info">Payment Management</button>
+        <button style={{marginLeft: "10px"}} onClick={ () => this.listProfile()} className="btn btn-info">Profile Management</button>
 
       </div>
     );

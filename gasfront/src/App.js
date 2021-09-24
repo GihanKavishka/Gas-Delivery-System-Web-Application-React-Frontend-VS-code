@@ -33,12 +33,16 @@ import ViewProductComponent3 from './components/ViewProductComponent3';
 import UpdateCustomerComponent from './components/UpdateCustomerComponent';
 
 import ListPaymentComponent from './components/ListPaymentComponent';
+import ListProfileComponent from './components/ListProfileComponent';
 
 import SuccessComponent from './components/SuccessComponent';
 
 import CreatePaymentComponent from './components/CreatePaymentComponent';
+import CreateProfileComponent from './components/CreateProfileComponent';
 import UpdatePaymentComponent from './components/UpdatePaymentComponent.jsx';
+import UpdateProfileComponent from './components/UpdateProfileComponent.jsx';
 import ViewPaymentComponent from './components/ViewPaymentComponent';
+import ViewProfileComponent from './components/ViewProfileComponent';
 
 
 
@@ -191,8 +195,13 @@ class App extends Component {
             
             <Route path = "/add-payment/:id" component = {CreatePaymentComponent}></Route>
             <Route path = "/view-payment/:id" component = {ViewPaymentComponent}></Route>
+            <Route path = "/view-profile/:customer_id" component = {ViewProfileComponent}></Route>
 
            <Route path = "/update-payment/:id" component = {UpdatePaymentComponent}></Route>
+           <Route path = "/update-profile/:customer_id" component = {UpdateProfileComponent}></Route>
+
+           <Route path = "/add-profile/:customer_id" component = {CreateProfileComponent}></Route>
+           <Route path = "/listprofile" component = {ListProfileComponent}></Route>
 
           </Switch>
         </div>

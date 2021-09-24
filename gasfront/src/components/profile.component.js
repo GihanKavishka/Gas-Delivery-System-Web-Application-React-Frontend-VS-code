@@ -21,6 +21,10 @@ export default class Profile extends Component {
 
   }
 
+  addProfile(){
+    this.props.history.push(`/add-profile/_add`);
+}
+
   
   render() {
     if (this.state.redirect) {
@@ -60,7 +64,7 @@ export default class Profile extends Component {
         </ul>
       </div>: null}
 
-      
+      <button style={{marginLeft: "10px"}} onClick={ () => this.addProfile()} className="btn btn-info">ADD Profile Details </button>
 
       </div>
     );
