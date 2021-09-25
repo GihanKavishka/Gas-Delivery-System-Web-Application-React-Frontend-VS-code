@@ -19,7 +19,7 @@ import UserListProductComponent from './components/UserListProductComponent';
 import ListProductComponent from './components/ListProductComponent';
 
 
-import CreateProductComponent from './components/CreateProductComponent';
+
 
 
 
@@ -38,8 +38,10 @@ import ListProfileComponent from './components/ListProfileComponent';
 import SuccessComponent from './components/SuccessComponent';
 
 import CreatePaymentComponent from './components/CreatePaymentComponent';
+import CreateProductComponent from './components/CreateProductComponent';
 import CreateProfileComponent from './components/CreateProfileComponent';
 import UpdatePaymentComponent from './components/UpdatePaymentComponent.jsx';
+import UpdateProductComponent from './components/UpdateProductComponent.jsx';
 import UpdateProfileComponent from './components/UpdateProfileComponent.jsx';
 import ViewPaymentComponent from './components/ViewPaymentComponent';
 import ViewProfileComponent from './components/ViewProfileComponent';
@@ -177,7 +179,7 @@ class App extends Component {
 
             <Route path = "/home" component = {UserListProductComponent}></Route>
             <Route path = "/product-user" component = {UserListProductComponent}></Route>
-            <Route path = "/add-product/_add" component = {CreateProductComponent}></Route>
+            <Route path = "/add-product/:product_id" component = {CreateProductComponent}></Route>
             
             <Route path = "/product" component = {ListProductComponent}></Route>
             <Route path = "/view-product/:product_id" component = {ViewProductComponent}></Route>
@@ -189,6 +191,7 @@ class App extends Component {
             <Route path = "/view-product3/:product_id" component = {ViewProductComponent3}></Route>
                          
             <Route path = "/update-customer/:customer_id" component = {UpdateCustomerComponent}></Route> 
+            <Route path = "/update-product/:product_id" component = {UpdateProductComponent}></Route> 
 
             <Route path = "/payment" component = {ListPaymentComponent}></Route>
             <Route path = "/success" component = {SuccessComponent}></Route>

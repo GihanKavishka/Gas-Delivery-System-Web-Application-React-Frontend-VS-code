@@ -82,12 +82,7 @@ class UpdateProductComponent extends Component {
             <div>
                 <br></br>
                    <div className = "container">
-                        <div className = "row">
-                            <div className = "card col-md-6 offset-md-3 offset-md-3">
-                                {
-                                    this.getTitle()
-                                }
-                                <div className = "card-body">
+                        
                                     <form>
                                         <div className = "form-group">
                                             <label> Product Name: </label>
@@ -108,9 +103,9 @@ class UpdateProductComponent extends Component {
                                         <button className="btn btn-success" onClick={this.updateProduct}>Save</button>
                                         <button className="btn btn-danger" onClick={this.cancel.bind(this)} style={{marginLeft: "10px"}}>Cancel</button>
                                     </form>
-                                </div>
-                            </div>
-                        </div>
+                                
+                            
+                        
 
                    </div>
             </div>

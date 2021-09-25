@@ -28,6 +28,14 @@ class ListProductComponent extends Component {
     makeDelivary(product_id){
         
     }
+    editProduct(product_id){
+        this.props.history.push(`/update-product/${product_id}`);
+    }
+    deleteProduct(product_id){
+        ProductService.deleteProduct(product_id).then( res => {
+            this.setState({product: this.state.product.filter(product => product.product_id !== product_id)});
+        });
+    }
 
     
     addProduct(){
@@ -39,9 +47,9 @@ class ListProductComponent extends Component {
             <div>
                  <h2 className="text-center">Product List</h2>
                 
-                 <div className = "row">
-                    <button className="btn btn-primary" onClick={this.addProduct}> Add Product</button>
-                 </div>
+                 
+                 <button style={{marginLeft: "10px"}} onClick={ () => this.addProduct()} className="btn btn-info">ADD Product</button>
+                
                     
                  
                  <br></br>
